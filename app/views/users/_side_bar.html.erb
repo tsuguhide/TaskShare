@@ -1,9 +1,14 @@
 <div class="side-first-header">
-  <div class="first-username">
-    <a href="#">Nakazawa.T</a>
+  <div class="side-first">
+    <%= link_to "トップページ",  root_path, class: 'btn'%>
   </div>
-  <div class="first-logout">
-    <a href="#">ログアウト</a>
+  <div class="side-second">
+    <div class="first-username">
+      <%= link_to current_user.user_name, edit_user_path(current_user) %>
+    </div>
+    <div class="first-logout">
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
+    </div>
   </div>
 </div>
 
