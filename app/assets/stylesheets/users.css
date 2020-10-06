@@ -1,0 +1,102 @@
+.wrapper {
+  display: flex;
+}
+
+.side-bar {
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+}
+
+.main-display {
+  background-color: ffffff;
+  width: calc(100% - 300px);
+  padding: 0 40px;
+}
+
+.side-first-header {
+  background-color: #253141;
+  height: 100px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.side-first-header a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.side-second-header {
+  background-color: #2f3e51;
+  height: 100px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+
+.side-second-header a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+
+
+.side-main {
+  background-color: darkslategrey;
+  height: calc(100% - 200px);
+  padding: 0 20px;
+}
+
+.side-title {
+  color: white;
+}
+
+.side-task {
+  padding: 20px 0 40px 0;
+}
+
+.side-task a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.edit-title {
+  padding: 30px 0;
+  font-size: 30px;
+}
+
+.edit-task {
+  padding: 20px 0;
+}
+
+.form-text {
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-textarea {
+  height: 200px;
+  width: 100%;
+  padding: 10px 10px;
+}
+
+.new-title {
+  padding: 10px 0 30px;
+  border-bottom: #253141 solid 1px;
+}
+
+.new-task {
+  padding: 10px 0 30px;
+}
+
+.mypage {
+  display: flex;
+}
