@@ -136,9 +136,9 @@ SNSによる社会が形成されている以上このような行為が横行�
 git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記述しましょう。この時、アプリケーション開発に使用した環境を併記することを忘れないでください（パッケージやRubyのバージョンなど）。
 
 ## データベース設計
-<%= image_tag "TaskShareER.png", :size =>'450x450' %>
+![TaskShareER](https://user-images.githubusercontent.com/69830692/95299413-a4fd4b00-08b8-11eb-97fd-0feb9b97ea17.png)
 
 ## 画面遷移図
-<%= image_tag "Screen_transition.png", :size =>'450x450' %>
+![Screen_transition](https://user-images.githubusercontent.com/69830692/95299321-7b442400-08b8-11eb-937e-486bd11398cd.png)
 
 
