@@ -38,7 +38,7 @@ Things you may want to cover:
 ### Association
 
 - has_many :tasks
-- has_one :records
+- has_one :record
 
 ## tasks テーブル
 
@@ -56,7 +56,7 @@ Things you may want to cover:
 ### Association
 
 - belongs_to :user
-- belongs_to :records
+- belongs_to :record
 
 ## records テーブル
 
