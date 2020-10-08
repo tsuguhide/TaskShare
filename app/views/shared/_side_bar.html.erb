@@ -14,7 +14,7 @@
 
 <div class="side-second-header">
   <div class="second-create">
-    <a href="#">タスク作成</a>
+    <%= link_to "タスク作成", new_task_path, class: 'btn'%>
   </div>
   <div class="second-download">
     <a href="#">ダウンロード</a>
@@ -25,7 +25,7 @@
 <div class="side-main">
   <div class="side-title">[タスク一覧・編集]</div>
   <div class="side-task">
-    <a href="#">７kgダイエット[三ヶ月]</a>
+    <%= link_to "７kgダイエット[三ヶ月]", tasks_path, class: 'btn'%>
   </div>
   <div class="side-task">
     <a href="#">ポートフォリオ作成</a>
