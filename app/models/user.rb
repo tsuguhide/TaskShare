@@ -6,4 +6,7 @@ class User < ApplicationRecord
 
   validates :user_name, presence: true
 
+  # テーブルとのアソシエーション
+  has_many :tasks  
+
 end
