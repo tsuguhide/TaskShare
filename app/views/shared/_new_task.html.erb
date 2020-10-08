@@ -1,0 +1,44 @@
+<%= form_with model: @task, local: true do |f| %>
+  <div class="new-title">
+    <div class="weight-bold-text">
+      目標（※タイトルとして表示されます）
+    </div>
+    <div class="title-input">
+      <%= f.text_field :title, class:"form-text", id:"title", placeholder:"目標の数値や期間など,具体的に書きましょう。例：半年で５kgダイエット,３ヶ月後の数学試験で８０点以上を取る)" %>
+    </div>
+
+    <div class="weight-bold-text">
+      詳細
+    </div>
+    <%= f.text_area :title_detail, class:"form-textarea", id:"title_detail", placeholder:"目標を達成する為の仕組みを考えましょう。具体的かつ分かりやすいものがGood！" %>
+    <div class="weight-bold-text">
+      カテゴリー選択
+    </div>
+    <div class="title-input">
+      <input type="text" class="form-text" placeholder= "アクティブハッシュにて対応予定">
+    </div>
+  </div>
+
+  <%# jsを使ってタスク名以降のフォームを追加させる %>
+  <div class="new-task">
+    <div class="weight-bold-text">
+      タスク名
+    </div>
+    <div class="form-input">
+      <%= f.text_field :task, class:"form-text", id:"task", placeholder:"詳細で書いた仕組みを一つのタスクに分割しよう" %>
+    </div>
+
+    <div class="weight-bold-text">
+      タスク詳細
+    </div>
+    <%= f.text_area :task_memo, class:"form-textarea", id:"task_memo", placeholder:"箇条書きなどでこのタスクで達成することを書こう！" %>
+    <div>
+    [タスクを追加する] [タスクを削除する]
+    </div>
+  </div>
+  <div class="sell-btn-contents">
+      <%= f.submit "出品する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
+<% end %>
+
