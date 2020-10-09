@@ -23,9 +23,11 @@
 
 
 <div class="side-main">
-  <div class="side-title">[タスク一覧・編集]</div>
+  <div class="side-title">
+    <%= link_to "[タスク一覧・編集]", tasks_path, class: 'btn'%>
+  </div>
   <div class="side-task">
-    <%= link_to "７kgダイエット[三ヶ月]", tasks_path, class: 'btn'%>
+    <%= link_to "７kgダイエット[三ヶ月]", new_task_path, class: 'btn'%>
   </div>
   <div class="side-task">
     <a href="#">ポートフォリオ作成</a>

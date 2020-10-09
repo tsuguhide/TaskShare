@@ -53,8 +53,9 @@
   padding: 0 20px;
 }
 
-.side-title {
+.side-title a{
   color: white;
+  text-decoration: none;
 }
 
 .side-task {
