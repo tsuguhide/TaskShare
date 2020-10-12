@@ -53,13 +53,16 @@
   padding: 0 20px;
 }
 
-.side-title a{
+.side-title {
   color: white;
   text-decoration: none;
 }
 
 .side-task {
   padding: 20px 0 40px 0;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
 }
 
 .side-task a {
@@ -100,4 +103,8 @@
 
 .mypage {
   display: flex;
+}
+
+.title-list {
+  list-style: none;
 }

@@ -1,8 +1,5 @@
 class TasksController < ApplicationController
-
-  def index
-    @tasks = Task.all
-  end
+  before_action :task, only: [:new]
 
   def new
     @task = Task.new
@@ -21,6 +18,10 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:title, :title_detail, :task, :task_memo).merge(user_id: current_user.id)
+  end
+
+  def task
+    @tasks = Task.all
   end
 
 
