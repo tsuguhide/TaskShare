@@ -1,37 +1,55 @@
-<div class="edit-title">
-  <details>
-    <summary>７kgダイエット[三ヶ月]</summary>
-    脂肪＝7000kcal<br>
-    7000*7kg＝49000kcal<br>
-    49000/90日=545kcal<br>
-    基礎代謝量[参考URL https://keisan.casio.jp/exec/system/1161228736]<br>
-    基礎代謝量-545kcal=１日の摂取可能カロリー<br>
-  </details>
-</div>
+<%= form_with model: @tasks, local: true do |f| %>
+  <div class="new-title">
+    <div class="weight-bold-text">
+      目標
+    </div>
+    <div class="title-input">
+      <details>
+        <summary><%= @tasks.title %></summary>
+        <%= f.text_field :title, class:"form-text", id:"title", placeholder:"目標の数値や期間など,具体的に書きましょう。例：半年で５kgダイエット,３ヶ月後の数学試験で８０点以上を取る)" %>
+      </details>
+    </div>
 
-<div>
-    カテゴリー：＃運動
-</div>
+    <div class="weight-bold-text">
+      詳細
+    </div>
+      <details>
+        <summary><%= @tasks.title_detail %></summary>
+        <%= f.text_area :title_detail, class:"form-textarea", id:"title_detail", placeholder:"目標を達成する為の仕組みを考えましょう。具体的かつ分かりやすいものがGood！" %>
+      </details>
+    <div class="weight-bold-text">
+      カテゴリー選択
+    </div>
+    <div class="title-input">
+      <input type="text" class="form-text" placeholder= "アクティブハッシュにて対応予定">
+    </div>
+  </div>
 
-<div class="edit-task">
-  <details>
-      <summary>TaskA:食事制限</summary>
-      摂取可能カロリー955kcal<br>
-      朝食：プロテイン[118kcal]<br>
-      昼食：フリー<br>
-      夕食：豚汁[121kcal]冷奴[100kcal]フリー<br>
-      ※フリー枠で合計616kcalまで<br>
-    </details>
-</div>
+  <%# jsを使ってタスク名以降のフォームを追加させる %>
+  <div class="new-task">
+    <div class="weight-bold-text">
+      タスク名
+    </div>
+    <div class="form-input">
+      <details>
+        <summary><%= @tasks.task %></summary>
+        <%= f.text_field :task, class:"form-text", id:"task", placeholder:"詳細で書いた仕組みを一つのタスクに分割しよう" %>
+      </details>
+    </div>
 
-<div class="edit-task">
-  <details>
-      <summary>TaskB:運動</summary>
-      消費カロリー = 強度（メッツ） × 時間（h） × 体重（kg）<br>
-      参考URL https://mizunosusume.jp/exeecise-calories-1590<br>
-      ジョギング[7*1*60=420kcal]<br>
-      水泳(クロール)[8.3*1*60=498kcal]<br>
-      サイクリング[8*1*60=480kcal]<br>
-      ※消費カロリー分追加で食べても良い
-    </details>
-</div>
+    <div class="weight-bold-text">
+      タスク詳細
+    </div>
+      <details>
+        <summary><%= @tasks.task_memo %></summary>
+        <%= f.text_area :task_memo, class:"form-textarea", id:"task_memo", placeholder:"箇条書きなどでこのタスクで達成することを書こう！" %>
+      </details>
+    <div>
+    [タスクを追加する] [タスクを削除する]
+    </div>
+  </div>
+  <div class="sell-btn-contents">
+      <%= f.submit "更新する" ,class:"create-btn" %>
+  </div>
+<% end %>
+

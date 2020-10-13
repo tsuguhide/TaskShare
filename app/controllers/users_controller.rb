@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
+    @taskall = Task.all
   end
 
   def edit
