@@ -27,12 +27,15 @@
     [タスク一覧・編集]
   </div>
   <% @taskall.each do |task| %>
-    <li class='title-list'>
-      <%= link_to edit_task_path(task) do %>
-      <div class='side-task'>
-        <%= task.title %>
-      </div>
-      <% end %>
-    </li>
+    <% if current_user.id == task.user_id %>
+      <li class='title-list'>
+        <%= link_to edit_task_path(task) do %>
+        <div class='side-task'>
+          <%= task.title %>
+        </div>
+        <% end %>
+      </li>
+    <% else %>
+    <% end %>
   <% end %>
 </div>
