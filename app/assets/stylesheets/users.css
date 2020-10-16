@@ -102,3 +102,15 @@
 .title-list {
   list-style: none;
 }
+
+.btn-contents {
+  display: flex;
+}
+
+.sell-btn-content {
+  padding-right: 10px;
+}
+
+.delete-btn-content {
+  padding-right: 10px;
+}
