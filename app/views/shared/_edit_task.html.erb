@@ -21,14 +21,14 @@
       カテゴリー選択
     </div>
     <div class="title-input">
-      <input type="text" class="form-text" placeholder= "アクティブハッシュにて対応予定">
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
     </div>
   </div>
 
   <%# jsを使ってタスク名以降のフォームを追加させる %>
   <div class="new-task">
     <div class="weight-bold-text">
-      タスク名
+      個別タスク名
     </div>
     <div class="form-input">
       <details>
@@ -38,18 +38,26 @@
     </div>
 
     <div class="weight-bold-text">
-      タスク詳細
+      個別タスク詳細
     </div>
       <details>
         <summary><%= @tasks.task_memo %></summary>
         <%= f.text_area :task_memo, class:"form-textarea", id:"task_memo", placeholder:"箇条書きなどでこのタスクで達成することを書こう！" %>
       </details>
     <div>
-    [タスクを追加する] [タスクを削除する]
+    [個別タスクを追加] [個別タスクを削除]
     </div>
   </div>
-  <div class="sell-btn-contents">
-      <%= f.submit "更新する" ,class:"create-btn" %>
+  <div class="btn-contents">
+    <div class="sell-btn-content">
+        <%= f.submit "更新する" ,class:"create-btn" %>
+    </div>
+    <div class="delete-btn-content">
+        <%= f.submit "削除する" ,class:"create-btn" %>
+    </div>
+    <div class="up-btn-content">
+        <%= f.submit "アップロード" ,class:"create-btn" %>
+    </div>
   </div>
 <% end %>
 

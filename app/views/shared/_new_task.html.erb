@@ -22,18 +22,18 @@
   <%# jsを使ってタスク名以降のフォームを追加させる %>
   <div class="new-task">
     <div class="weight-bold-text">
-      タスク名
+      個別タスク名
     </div>
     <div class="form-input">
       <%= f.text_field :task, class:"form-text", id:"task", placeholder:"詳細で書いた仕組みを一つのタスクに分割しよう" %>
     </div>
 
     <div class="weight-bold-text">
-      タスク詳細
+      個別タスク詳細
     </div>
     <%= f.text_area :task_memo, class:"form-textarea", id:"task_memo", placeholder:"箇条書きなどでこのタスクで達成することを書こう！" %>
     <div>
-    [タスクを追加する] [タスクを削除する]
+    [個別タスクを追加] [個別タスクを削除]
     </div>
   </div>
   <div class="sell-btn-contents">
