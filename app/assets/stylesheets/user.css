@@ -113,3 +113,8 @@
   font-size: 13px;
 }
 
+.select-box {
+  height: 30px;
+  width: 15%;
+  padding-left: 20px;
+}
