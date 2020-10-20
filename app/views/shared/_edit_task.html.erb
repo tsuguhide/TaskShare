@@ -53,7 +53,7 @@
         <%= f.submit "更新する" ,class:"create-btn" %>
     </div>
     <div class="delete-btn-content">
-        <%= f.submit "削除する" ,class:"create-btn" %>
+        <%= button_to '削除する', task_path(@tasks.id), method: :delete %>
     </div>
     <div class="up-btn-content">
         <%= f.submit "アップロード" ,class:"create-btn" %>
